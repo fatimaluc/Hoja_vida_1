@@ -13,146 +13,165 @@
 
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: #e8e8e8;
-      padding: 20px;
-      color: #333;
+      background: #f7f2ed;
+      color: #4a3d3a;
+      padding: 24px;
     }
 
     .container {
       max-width: 1000px;
       margin: auto;
-      background: white;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      border-radius: 10px;
+      background: #fffdf9;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(75, 64, 61, 0.12);
       overflow: hidden;
     }
 
-    .print-btn {
-      text-align: center;
-      padding: 15px;
-      background: #2c3e50;
-      border-bottom: 2px solid #1a252f;
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      padding: 18px 22px 0 22px;
     }
 
-    .print-btn button {
-      background: #3498db;
-      color: white;
+    .print-button {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
       border: none;
-      padding: 12px 30px;
-      font-size: 16px;
-      border-radius: 5px;
+      background: rgba(176, 134, 148, 0.18);
+      color: #8f6f71;
       cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(124, 95, 96, 0.12);
+      display: grid;
+      place-items: center;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
-    .print-btn button:hover {
-      background: #2980b9;
-      transform: scale(1.05);
+    .print-button:hover {
+      background: rgba(176, 134, 148, 0.28);
+      transform: translateY(-1px);
     }
 
     .cv {
       display: grid;
       grid-template-columns: 280px 1fr;
-      background: white;
+      min-height: 100%;
     }
 
     .sidebar {
-      background: linear-gradient(135deg, #2c3e50, #34495e);
-      color: white;
-      padding: 30px 25px;
+      background: linear-gradient(180deg, #f9e5e7 0%, #e9f0ed 100%);
+      padding: 34px 24px;
       text-align: center;
     }
 
     .profile-pic {
       width: 200px;
       height: 200px;
-      border-radius: 10px;
+      border-radius: 18px;
       object-fit: cover;
-      margin-bottom: 20px;
-      border: 4px solid white;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin: 0 auto 18px;
+      border: 4px solid #fff;
+      box-shadow: 0 8px 18px rgba(123, 93, 96, 0.12);
     }
 
     .sidebar h1 {
       font-size: 18px;
-      margin-bottom: 5px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      color: #6a4f52;
+      letter-spacing: 0.8px;
     }
 
     .sidebar h2 {
-      font-size: 16px;
-      color: #f39c12;
-      margin-bottom: 20px;
+      font-size: 14px;
+      color: #8f6f71;
+      margin-bottom: 16px;
       font-weight: 600;
     }
 
-    .sidebar-divider {
-      border: none;
-      border-top: 2px solid rgba(255,255,255,0.2);
-      margin: 20px 0;
+    .sidebar .label {
+      color: #a48085;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
 
-    .contact-info {
-      text-align: left;
+    .sidebar p {
+      color: #6a5555;
       font-size: 13px;
-      line-height: 1.8;
+      line-height: 1.7;
+      margin-bottom: 10px;
     }
 
-    .contact-info p {
-      margin: 8px 0;
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 16px;
     }
 
-    .contact-label {
-      color: #f39c12;
+    .chip {
+      background: #f6eff0;
+      color: #8a6d70;
+      border-radius: 24px;
+      padding: 8px 12px;
+      font-size: 12px;
       font-weight: 600;
+      border: 1px solid rgba(175, 138, 141, 0.18);
     }
 
     .main-content {
-      padding: 40px;
+      padding: 34px 40px 40px 40px;
     }
 
     .header {
-      border-bottom: 3px solid #2c3e50;
-      padding-bottom: 20px;
-      margin-bottom: 30px;
+      margin-bottom: 22px;
     }
 
     .header h1 {
-      font-size: 32px;
-      color: #2c3e50;
-      margin-bottom: 5px;
-      font-weight: 700;
-      letter-spacing: 1px;
+      font-size: 30px;
+      color: #5c4145;
+      margin-bottom: 6px;
+      letter-spacing: 0.9px;
     }
 
     .header h2 {
-      font-size: 20px;
-      color: #f39c12;
+      font-size: 18px;
+      color: #987d83;
       font-weight: 600;
+      margin-bottom: 10px;
     }
 
     .section {
-      margin-bottom: 25px;
+      margin-bottom: 24px;
     }
 
     .section-title {
-      background: #2c3e50;
-      color: white;
-      padding: 10px 15px;
-      font-size: 18px;
+      display: inline-block;
+      background: #f5dfe1;
+      color: #7f5f64;
+      padding: 10px 14px;
+      border-radius: 16px;
+      font-size: 14px;
       font-weight: 700;
-      margin-bottom: 12px;
-      border-radius: 5px;
+      margin-bottom: 14px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
+    }
+
+    .section p,
+    .section li {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #5f4d4b;
     }
 
     .job {
       margin-bottom: 18px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #ecf0f1;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #f1e5e6;
     }
 
     .job:last-child {
@@ -160,105 +179,71 @@
     }
 
     .job-title {
-      font-weight: 700;
-      color: #2c3e50;
       font-size: 15px;
-      margin-bottom: 3px;
+      color: #6d484d;
+      font-weight: 700;
+      margin-bottom: 4px;
     }
 
     .job-company {
-      color: #7f8c8d;
       font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 2px;
+      color: #8b6e72;
+      margin-bottom: 4px;
     }
 
     .job-date {
-      color: #f39c12;
       font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 6px;
+      color: #b48e94;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
     .job-desc {
-      color: #555;
-      font-size: 14px;
-      line-height: 1.5;
-      margin-left: 15px;
+      margin-left: 16px;
     }
 
-    .skills-container {
-      display: flex;
-      flex-wrap: wrap;
+    .job-desc li {
+      margin-bottom: 6px;
+    }
+
+    .education-item,
+    .reference-item {
+      margin-bottom: 16px;
+    }
+
+    .edu-year,
+    .ref-name {
+      color: #b3787f;
+      font-weight: 700;
+      margin-bottom: 3px;
+      display: block;
+    }
+
+    .edu-title,
+    .ref-phone,
+    .edu-place {
+      font-size: 14px;
+      color: #5f4d4b;
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 10px;
     }
 
-    .skill-tag {
-      background: #ecf0f1;
-      color: #2c3e50;
-      padding: 8px 12px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 600;
-      border-left: 3px solid #f39c12;
-    }
-
-    .education-item {
-      margin-bottom: 15px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #ecf0f1;
-    }
-
-    .education-item:last-child {
-      border-bottom: none;
-    }
-
-    .edu-year {
-      color: #f39c12;
-      font-weight: 700;
-      margin-bottom: 3px;
-    }
-
-    .edu-title {
-      font-weight: 600;
-      color: #2c3e50;
-      margin-bottom: 2px;
-    }
-
-    .edu-place {
-      color: #7f8c8d;
-      font-size: 13px;
-    }
-
-    .reference-item {
-      margin-bottom: 12px;
-    }
-
-    .ref-name {
-      font-weight: 700;
-      color: #2c3e50;
-      margin-bottom: 2px;
-    }
-
-    .ref-phone {
-      color: #555;
-      font-size: 13px;
-    }
-
-    @media (max-width: 900px) {
+    @media (max-width: 860px) {
       .cv {
         grid-template-columns: 1fr;
       }
       .sidebar {
-        padding: 25px;
-      }
-      .profile-pic {
-        width: 150px;
-        height: 150px;
-        margin: auto auto 20px;
+        padding: 28px 22px;
       }
       .main-content {
-        padding: 25px;
+        padding: 28px 25px 35px 25px;
+      }
+      .courses-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -272,188 +257,180 @@
         border-radius: 0;
         max-width: 100%;
       }
-      .print-btn {
+      .topbar {
         display: none;
       }
-      .cv {
-        box-shadow: none;
-      }
       .sidebar {
+        background: #f7f2ed;
         page-break-inside: avoid;
+      }
+      .section-title {
+        background: #f1e1e3;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="print-btn">
-      <button onclick="window.print()">🖨️ Imprimir Hoja de Vida</button>
+    <div class="topbar">
+      <button class="print-button" onclick="window.print()" title="Imprimir hoja de vida">
+        🖨️
+      </button>
     </div>
 
     <div class="cv">
-      <!-- SIDEBAR -->
       <div class="sidebar">
-        <img src="https://via.placeholder.com/200x200?text=Foto+Perfil" alt="Fatima Mireya Luctuala Angamarca" class="profile-pic">
+        <img src="https://via.placeholder.com/200x200?text=Foto+Perfil" alt="Foto de perfil" class="profile-pic">
         <h1>FATIMA MIREYA</h1>
         <h2>LUCTUALA ANGAMARCA</h2>
-        <p style="font-size: 14px; margin-bottom: 10px;">Ingeniera Automotriz</p>
-        
-        <hr class="sidebar-divider">
-        
-        <div class="contact-info">
-          <p><span class="contact-label">UBICACIÓN:</span><br>Quito, Pichincha, Ecuador</p>
-          <p><span class="contact-label">TELÉFONO:</span><br>0997648456</p>
-          <p><span class="contact-label">EMAIL:</span><br>luctualafatima@gmail.com</p>
-          <p><span class="contact-label">LICENCIA:</span><br>Tipo B</p>
+
+        <div class="label">Datos de contacto</div>
+        <p>Quito / Pichincha / Ecuador</p>
+        <p>0997648456</p>
+        <p>luctualafatima@gmail.com</p>
+        <p>Tipo B</p>
+
+        <div class="label">Habilidades</div>
+        <div class="chips">
+          <span class="chip">Creatividad</span>
+          <span class="chip">Liderazgo</span>
+          <span class="chip">Comunicación</span>
+          <span class="chip">Organización</span>
+          <span class="chip">Administración</span>
+          <span class="chip">AutoCAD</span>
+          <span class="chip">Inventor</span>
+          <span class="chip">SolidWorks</span>
         </div>
 
-        <hr class="sidebar-divider">
-
-        <div style="text-align: left;">
-          <h3 style="color: #f39c12; font-size: 14px; margin-bottom: 10px; text-transform: uppercase;">Habilidades</h3>
-          <div class="skills-container" style="justify-content: flex-start;">
-            <span class="skill-tag">Creatividad</span>
-            <span class="skill-tag">Liderazgo</span>
-            <span class="skill-tag">Comunicación</span>
-            <span class="skill-tag">Organización</span>
-            <span class="skill-tag">AutoCAD</span>
-            <span class="skill-tag">SolidWorks</span>
-            <span class="skill-tag">Inventor</span>
-          </div>
-        </div>
-
-        <hr class="sidebar-divider">
-
-        <div style="text-align: left;">
-          <h3 style="color: #f39c12; font-size: 14px; margin-bottom: 8px; text-transform: uppercase;">Idiomas</h3>
-          <p style="font-size: 13px;">🌐 Inglés</p>
-        </div>
+        <div class="label" style="margin-top: 18px;">Idiomas</div>
+        <p>Inglés</p>
       </div>
 
-      <!-- CONTENIDO PRINCIPAL -->
       <div class="main-content">
         <div class="header">
-          <h1>FATIMA MIREYA LUCTUALA ANGAMARCA</h1>
+          <h1>Fatima Mireya Luctuala Angamarca</h1>
           <h2>Ingeniera Automotriz</h2>
         </div>
 
-        <!-- ACERCA DE -->
         <div class="section">
-          <div class="section-title">Perfil Profesional</div>
-          <p style="color: #555; line-height: 1.8; text-align: justify;">
-            Profesional altamente responsable y orientada a la consecución de objetivos. Destaco por una ética de liderazgo que se complementa con un enfoque colaborativo, esencial para el desarrollo de trabajos en equipo sobresalientes. Mi creatividad me permite generar soluciones inmediatas ante desafíos, y soy conocida por mi amabilidad, puntualidad y capacidad para mantener relaciones laborales positivas.
+          <div class="section-title">Sobre mí</div>
+          <p>
+            Profesional altamente responsable y orientada a la consecución de mis objetivos. Destaco por una ética de liderazgo que se complementa con un enfoque colaborativo, esencial para el desarrollo de un trabajo en equipo sobresaliente. Mi creatividad es una herramienta clave que me permite generar soluciones inmediatas ante cualquier desafío. Además, soy conocida por mi amabilidad y puntualidad, cualidades que me permiten forjar y mantener relaciones laborales positivas.
           </p>
         </div>
 
-        <!-- EXPERIENCIA LABORAL -->
         <div class="section">
-          <div class="section-title">Experiencia Laboral</div>
+          <div class="section-title">Experiencia laboral</div>
 
           <div class="job">
-            <div class="job-company">ANDES CABLES PASTOCALLE — Quito</div>
-            <div class="job-date">Marzo 2024 – Actualidad</div>
-            <div class="job-title">Asistente Técnico & Coordinador de Apoyo Control de Calidad</div>
-            <div class="job-desc">
-              ✓ Vigilancia y control de equipos industriales<br>
-              ✓ Diagnóstico de problemas en instalaciones industriales<br>
-              ✓ Inspección de materias primas y productos terminados<br>
-              ✓ Atención de auditorías internas y externas<br>
-              ✓ Elaboración de informes de mantenimiento y calidad
-            </div>
+            <div class="job-title">Coordinador de apoyo Control de Calidad</div>
+            <div class="job-company">Andes Cables Pastocalle — Quito</div>
+            <div class="job-date">2025 – Actualidad</div>
+            <ul class="job-desc">
+              <li>Dominio de equipos de laboratorio y herramientas.</li>
+              <li>Inspección de materias primas, procesos de producción y productos terminados.</li>
+              <li>Identificación y reporte de productos no conformes.</li>
+              <li>Apoyo en acciones correctivas y preventivas.</li>
+              <li>Elaboración de informes de calidad y atención de auditorías.</li>
+            </ul>
           </div>
 
           <div class="job">
-            <div class="job-company">PROCESO INTEGRAL DE LA VENTA DE REPUESTOS — Quito</div>
-            <div class="job-date">Junio 2021 – Enero 2023</div>
+            <div class="job-title">Asistente Técnico</div>
+            <div class="job-company">Andes Cables Pastocalle — Quito</div>
+            <div class="job-date">Mar. 2024 – 2025</div>
+            <ul class="job-desc">
+              <li>Vigilar y controlar equipos.</li>
+              <li>Diagnóstico de problemas y averías en instalaciones industriales.</li>
+              <li>Planificación de intervenciones y elaboración de informes de mantenimiento.</li>
+            </ul>
+          </div>
+
+          <div class="job">
             <div class="job-title">Asesora de Repuestos Automotrices</div>
-            <div class="job-desc">
-              ✓ Cotización, factura y entrega de repuestos<br>
-              ✓ Gestión y operación con proveedores<br>
-              ✓ Manejo de inventarios y control de compras<br>
-              ✓ Potenciamiento de la línea de repuestos
-            </div>
+            <div class="job-company">Proceso Integral de la Venta de Repuestos — Quito</div>
+            <div class="job-date">Jun. 2021 – Ene. 2023</div>
+            <ul class="job-desc">
+              <li>Cotización, factura y entrega de repuestos.</li>
+              <li>Gestión y operación con proveedores.</li>
+              <li>Potenciar y desarrollar la línea de repuestos.</li>
+              <li>Manejo de inventarios y control de compras.</li>
+            </ul>
           </div>
 
           <div class="job">
-            <div class="job-company">TALLERES MULTIMARCA LUC — Quito</div>
-            <div class="job-date">Junio 2016 – Septiembre 2022</div>
             <div class="job-title">Ayudante Técnico</div>
-            <div class="job-desc">
-              ✓ Mantenimiento preventivo, correctivo y predictivo<br>
-              ✓ Reparación de cajas manuales y motores<br>
-              ✓ Electrónica general de automóviles<br>
-              ✓ Mantenimiento para revisión vehicular
-            </div>
+            <div class="job-company">Talleres Multimarca LUC — Quito</div>
+            <div class="job-date">Jun. 2016 – Sep. 2022</div>
+            <ul class="job-desc">
+              <li>Mantenimiento preventivo, correctivo y predictivo.</li>
+              <li>Reparación de cajas manuales y motores a gasolina y diésel.</li>
+              <li>Electrónica general y revisión vehicular.</li>
+            </ul>
           </div>
 
           <div class="job">
-            <div class="job-company">AMBACAR — Quito</div>
-            <div class="job-date">Marzo 2021 – Abril 2021</div>
             <div class="job-title">Pasante Técnico</div>
-            <div class="job-desc">
-              ✓ Mantenimiento de sistemas automotrices<br>
-              ✓ Asesor de servicio<br>
-              ✓ Diagnóstico básico y manejo de scanner
-            </div>
+            <div class="job-company">Ambacar — Quito</div>
+            <div class="job-date">Mar. 2021 – Abr. 2021</div>
+            <ul class="job-desc">
+              <li>Mantenimiento preventivo, correctivo y predictivo.</li>
+              <li>Asesor de servicio y fichas técnicas.</li>
+              <li>Diagnóstico básico y manejo de scanner.</li>
+            </ul>
           </div>
         </div>
 
-        <!-- EDUCACIÓN -->
         <div class="section">
           <div class="section-title">Educación</div>
-
           <div class="education-item">
-            <div class="edu-year">2026 (En Curso)</div>
-            <div class="edu-title">Maestría en Producción y Operaciones Industriales</div>
-            <div class="edu-place">Mención en Tecnología 4.0 | Universidad ESPE — Latacunga</div>
+            <span class="edu-year">2026 (En curso)</span>
+            <span class="edu-title">Maestría en Producción y Operaciones Industriales</span>
+            <span class="edu-place">Universidad ESPE — Latacunga</span>
           </div>
-
           <div class="education-item">
-            <div class="edu-year">2023</div>
-            <div class="edu-title">Ingeniería Automotriz</div>
-            <div class="edu-place">Universidad de las Fuerzas Armadas ESPE — Latacunga</div>
+            <span class="edu-year">2023</span>
+            <span class="edu-title">Ingeniería Automotriz</span>
+            <span class="edu-place">Universidad ESPE — Latacunga</span>
           </div>
-
           <div class="education-item">
-            <div class="edu-year">2020</div>
-            <div class="edu-title">Bachillerato BGU</div>
-            <div class="edu-place">U.E. Simón Bolívar — Quito</div>
+            <span class="edu-year">2020</span>
+            <span class="edu-title">Bachillerato BGU</span>
+            <span class="edu-place">U.E. "Simón ..." — Quito</span>
           </div>
         </div>
 
-        <!-- CURSOS Y CERTIFICACIONES -->
         <div class="section">
-          <div class="section-title">Certificaciones y Cursos</div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-            <div>✓ Vehículos Eléctricos y Movilidad</div>
-            <div>✓ Sistema de Dirección Bosch</div>
-            <div>✓ Diagnóstico con Scanner</div>
-            <div>✓ Programación de ECUs</div>
-            <div>✓ Metrología Básica</div>
-            <div>✓ Auditor Interno (Bureau Veritas)</div>
-            <div>✓ Baterías Básico</div>
-            <div>✓ Suspensión y Lubricación</div>
+          <div class="section-title">Cursos y certificaciones</div>
+          <div class="courses-grid">
+            <div>II Congreso de Ingeniería Automotriz — Nov. 2017</div>
+            <div>Vehículos Eléctricos y Movilidad — Ago. 2021</div>
+            <div>Postratamiento de Gases de Escape — Sep. 2023</div>
+            <div>Diagnóstico con USB-Autoscop — Nov. 2023</div>
+            <div>Programación de ECUs y DTC OFF — Feb. 2024</div>
+            <div>Auditor Interno (Bureau Veritas) — Jun. 2026</div>
+            <div>Metrología Básica — Ene. 2026</div>
+            <div>Baterías Básico — May. 2026</div>
           </div>
         </div>
 
-        <!-- REFERENCIAS -->
         <div class="section">
-          <div class="section-title">Referencias Profesionales</div>
+          <div class="section-title">Referencias</div>
           <div class="reference-item">
-            <div class="ref-name">Ing. José Quiroz</div>
-            <div class="ref-phone">Teléfono: 0984532880</div>
+            <span class="ref-name">Ing. José Quiroz</span>
+            <span class="ref-phone">Teléfono: 0984532880</span>
           </div>
           <div class="reference-item">
-            <div class="ref-name">Ing. Cristian Paredes</div>
-            <div class="ref-phone">Teléfono: 0994454614</div>
+            <span class="ref-name">Ing. Cristian Paredes</span>
+            <span class="ref-phone">Teléfono: 0994454614</span>
           </div>
           <div class="reference-item">
-            <div class="ref-name">Ing. Cintia Raura</div>
-            <div class="ref-phone">Teléfono: 0994856074</div>
+            <span class="ref-name">Ing. Cintia Raura</span>
+            <span class="ref-phone">Teléfono: 0994856074</span>
           </div>
           <div class="reference-item">
-            <div class="ref-name">Ing. Jadira Oña</div>
-            <div class="ref-phone">Teléfono: 0987470104</div>
+            <span class="ref-name">Ing. Jadira Oña</span>
+            <span class="ref-phone">Teléfono: 0987470104</span>
           </div>
         </div>
       </div>
