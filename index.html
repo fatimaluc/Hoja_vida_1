@@ -1,4 +1,191 @@
-<h1>Saludos,</h1>
-<h2>Desde Quito</h2>
-<h3>Mi nombre es: Mireya</h3>
-<h4>Ingeniera Automotriz/Trabajo en una fabrica de Cables en Pastocalle</h4>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hoja de Vida</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f3eb;
+      color: #4b3f3f;
+      padding: 30px;
+    }
+
+    .cv {
+      max-width: 900px;
+      margin: auto;
+      background: #fffdf9;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #f4c6d7, #cfe8e2);
+      padding: 35px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      color: #6a4d4d;
+      margin-bottom: 8px;
+    }
+
+    .header h2 {
+      font-size: 18px;
+      color: #7b5e5e;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 14px;
+      color: #5f4c4c;
+      margin: 3px 0;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 25px 35px 35px;
+    }
+
+    .box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px;
+      border: 1px solid #f0e2d6;
+    }
+
+    .box h3 {
+      color: #8a5c7a;
+      margin-bottom: 10px;
+      font-size: 17px;
+      border-bottom: 2px solid #f4c6d7;
+      padding-bottom: 6px;
+    }
+
+    .box p, .box li {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #5a4a4a;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .skills span {
+      background: #f9e6ee;
+      color: #8a5c7a;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    .fecha {
+      font-weight: bold;
+      color: #6d8b84;
+    }
+
+    @media (max-width: 700px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv">
+    <div class="header">
+      <h1>FATIMA MIREYA LUCTUALA ANGAMARCA</h1>
+      <h2>Ingeniera Automotriz</h2>
+      <p>Quito / Pichincha / Ecuador</p>
+      <p>0997648456 | luctualafatima@gmail.com</p>
+    </div>
+
+    <div class="content">
+      <div class="box">
+        <h3>Sobre mí</h3>
+        <p>
+          Profesional responsable, creativa y con liderazgo colaborativo.
+          Me destaco por mi ética de trabajo, puntualidad, capacidad de
+          adaptación y compromiso con los objetivos del equipo.
+        </p>
+      </div>
+
+      <div class="box">
+        <h3>Habilidades</h3>
+        <div class="skills">
+          <span>Creatividad</span>
+          <span>Liderazgo</span>
+          <span>Comunicación</span>
+          <span>Organización</span>
+          <span>Administración</span>
+          <span>Office</span>
+          <span>AutoCAD</span>
+          <span>Inventor</span>
+          <span>SolidWorks</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Experiencia laboral</h3>
+        <p><span class="fecha">2021 - 2023</span> | Asesora de Repuestos Automotrices</p>
+        <ul>
+          <li>Cotización, factura y entrega de repuestos.</li>
+          <li>Gestión con proveedores y manejo de inventarios.</li>
+        </ul>
+        <br />
+        <p><span class="fecha">2016 - 2022</span> | Ayudante Técnico</p>
+        <ul>
+          <li>Mantenimiento preventivo, correctivo y predictivo.</li>
+          <li>Reparación de motores y cajas manuales.</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Educación</h3>
+        <p><span class="fecha">2026</span> | Maestría en Producción y Operaciones Industriales</p>
+        <p><span class="fecha">2023</span> | Universidad de las Fuerzas Armadas ESPE</p>
+        <p><span class="fecha">2020</span> | U.E. Simón...</p>
+      </div>
+
+      <div class="box">
+        <h3>Cursos</h3>
+        <ul>
+          <li>Diagnóstico con scanner</li>
+          <li>Vehículos eléctricos</li>
+          <li>Metrología básica</li>
+          <li>Auditor interno</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Referencias</h3>
+        <p>Ing. José Quiroz</p>
+        <p>Tel: 0984532880</p>
+        <br />
+        <p>Ing. Cristian Paredes</p>
+        <p>Tel: 0994454614</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
