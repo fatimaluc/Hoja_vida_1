@@ -5,128 +5,158 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hoja de Vida - Fatima Mireya Luctuala Angamarca</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f6efe9;
-      color: #3f2f2f;
+      font-family: Arial, sans-serif;
+      background: #f7efe8;
+      color: #4b3a3a;
+      margin: 0;
       padding: 30px;
-      line-height: 1.6;
     }
 
     .cv {
       max-width: 1000px;
       margin: auto;
       background: #fffdfb;
-      border-radius: 20px;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      display: grid;
+      grid-template-columns: 280px 1fr;
     }
 
-    .header {
-      background: linear-gradient(135deg, #f5d6e0, #dcefe8);
-      padding: 35px 40px;
+    .sidebar {
+      background: linear-gradient(135deg, #f7d8e4, #dcefe8);
+      padding: 30px;
       text-align: center;
     }
 
-    .header h1 {
-      font-size: 28px;
-      color: #6a4a4a;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .profile-pic {
+      width: 220px;
+      height: 220px;
+      border-radius: 12px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .header h2 {
+    .sidebar h1 {
       font-size: 18px;
-      color: #7a5c5c;
-      margin-bottom: 10px;
-      font-weight: 600;
+      color: #6a4b4b;
+      margin: 10px 0 5px;
     }
 
-    .header p {
-      font-size: 15px;
-      color: #5f4a4a;
+    .sidebar h2 {
+      font-size: 14px;
+      color: #7b5f5f;
+      font-weight: 500;
+      margin: 0 0 15px;
+    }
+
+    .sidebar p {
+      font-size: 12px;
+      color: #5b4a4a;
       margin: 3px 0;
     }
 
+    .main-content {
+      padding: 25px 30px;
+    }
+
+    .header-main {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #f4dce6;
+    }
+
+    .header-main h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #6a4b4b;
+    }
+
+    .header-main h2 {
+      margin: 8px 0 10px;
+      font-size: 18px;
+      color: #7b5f5f;
+      font-weight: 500;
+    }
+
     .content {
-      padding: 25px 35px 35px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
     }
 
     .box {
-      background: #fff;
-      border: 1px solid #efe2d8;
-      border-radius: 14px;
+      background: #ffffff;
+      border: 1px solid #f1e2d8;
+      border-radius: 12px;
       padding: 18px;
     }
 
     .box h3 {
-      color: #8a5e7a;
-      font-size: 17px;
+      margin-top: 0;
       margin-bottom: 10px;
-      border-bottom: 2px solid #f2dce6;
+      color: #8a5f78;
+      font-size: 16px;
+      border-bottom: 2px solid #f4dce6;
       padding-bottom: 6px;
     }
 
     .box p, .box li {
-      font-size: 14px;
-      color: #544444;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #574747;
     }
 
     ul {
       padding-left: 18px;
-      margin-top: 6px;
+      margin: 6px 0 0;
     }
 
     li {
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
 
     .skills {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 6px;
     }
 
     .skills span {
       background: #f8e9ef;
-      color: #8a5e7a;
+      color: #8a5f78;
       padding: 6px 10px;
       border-radius: 20px;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
     }
 
-    .subtitulo {
-      font-weight: 700;
-      color: #5f7f78;
-      margin-top: 8px;
-    }
-
     .fecha {
-      font-weight: 700;
-      color: #6b8b84;
+      font-weight: bold;
+      color: #6f8d86;
     }
 
-    blockquote {
-      margin-top: 8px;
-      padding-left: 12px;
-      border-left: 3px solid #c8d9d1;
-      color: #6d5b5b;
-      font-size: 13px;
+    .subtitulo {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #5d7b74;
+      font-size: 14px;
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 900px) {
+      .cv {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        padding: 20px;
+      }
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+      }
       .content {
         grid-template-columns: 1fr;
       }
@@ -135,186 +165,129 @@
 </head>
 <body>
   <div class="cv">
-    <div class="header">
-      <h1>Fatima Mireya Luctuala Angamarca</h1>
-      <h2>Ingeniera Automotriz</h2>
-      <p>Quito / Pichincha / Ecuador</p>
-      <p>0997648456</p>
-      <p>luctualafatima@gmail.com</p>
+    <!-- SIDEBAR CON FOTO -->
+    <div class="sidebar">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAC4ALgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWm5ybnJ2eoqOkpaanqKmqsrO0tba2uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba2uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q==" alt="Fatima Mireya Luctuala Angamarca" class="profile-pic">
+      <h1>FATIMA MIREYA</h1>
+      <h2>LUCTUALA ANGAMARCA</h2>
+      <p>Ingeniera Automotriz</p>
+      <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.3); margin: 15px 0;">
+      <p>📍 Quito / Pichincha / Ecuador</p>
+      <p>📱 0997648456</p>
+      <p>📧 luctualafatima@gmail.com</p>
     </div>
 
-    <div class="content">
-      <div class="box">
-        <h3>Sobre mí</h3>
-        <p>
-          Profesional altamente responsable y orientada a la consecución de mis objetivos.
-          Destaco por una ética de liderazgo que se complementa con un enfoque colaborativo,
-          esencial para el desarrollo de un trabajo en equipo sobresaliente. Mi creatividad
-          es una herramienta clave que me permite generar soluciones inmediatas ante cualquier
-          desafío. Además, soy conocida por mi amabilidad y puntualidad, cualidades que me
-          permiten forjar y mantener relaciones laborales positivas.
-        </p>
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-content">
+      <div class="header-main">
+        <h1>FATIMA MIREYA LUCTUALA ANGAMARCA</h1>
+        <h2>INGENIERA AUTOMOTRIZ</h2>
       </div>
 
-      <div class="box">
-        <h3>Habilidades</h3>
-        <div class="skills">
-          <span>Creatividad</span>
-          <span>Liderazgo</span>
-          <span>Comunicación</span>
-          <span>Organización</span>
-          <span>Administración</span>
-          <span>Paquete Office</span>
-          <span>AutoCAD</span>
-          <span>Inventor</span>
-          <span>SolidWorks</span>
+      <div class="content">
+        <div class="box">
+          <h3>Sobre mí</h3>
+          <p>
+            Profesional altamente responsable y orientada a la consecución de mis objetivos.
+            Destaco por una ética de liderazgo que se complementa con un enfoque colaborativo,
+            esencial para el desarrollo de un trabajo en equipo sobresaliente. Mi creatividad
+            es una herramienta clave que me permite generar soluciones inmediatas ante cualquier
+            desafío.
+          </p>
         </div>
-      </div>
 
-      <div class="box">
-        <h3>Experiencia laboral</h3>
+        <div class="box">
+          <h3>Habilidades</h3>
+          <div class="skills">
+            <span>Creatividad</span>
+            <span>Liderazgo</span>
+            <span>Comunicación</span>
+            <span>Organización</span>
+            <span>Administración</span>
+            <span>Office</span>
+            <span>AutoCAD</span>
+            <span>Inventor</span>
+            <span>SolidWorks</span>
+          </div>
+        </div>
 
-        <p class="subtitulo">Proceso Integral de la Venta de Repuestos</p>
-        <p><span class="fecha">Jun. 2021 – Ene. 2023</span> | Quito</p>
-        <p><strong>Asesora de Repuestos Automotrices</strong></p>
-        <ul>
-          <li>Cotización, factura y entrega de repuestos.</li>
-          <li>Gestión y operación con proveedores.</li>
-          <li>Potenciar y desarrollar la línea de repuestos.</li>
-          <li>Manejo de inventarios.</li>
-          <li>Control de compras y pedidos.</li>
-          <li>Soporte general al área.</li>
-        </ul>
+        <div class="box">
+          <h3>Experiencia laboral</h3>
 
-        <p class="subtitulo" style="margin-top: 14px;">Talleres Multimarca LUC</p>
-        <p><span class="fecha">Jun. 2016 – Sep. 2022</span> | Quito</p>
-        <p><strong>Ayudante Técnico</strong></p>
-        <ul>
-          <li>Mantenimiento preventivo, correctivo y predictivo.</li>
-          <li>Reparación de cajas manuales, motores a gasolina y diésel.</li>
-          <li>Mantenimiento para aprobación de la revisión vehicular.</li>
-          <li>ABC de frenos y motor.</li>
-          <li>Electrónica general de un automóvil.</li>
-        </ul>
+          <p class="subtitulo">Andes Cables Pastocalle</p>
+          <p><span class="fecha">Mar. 2024 – Actualidad</span></p>
+          <ul>
+            <li><strong>Asistente Técnico (2024–2025)</strong></li>
+            <li>Vigilar y controlar los equipos.</li>
+            <li>Diagnóstico de problemas en instalaciones industriales.</li>
+          </ul>
+          <ul style="margin-top: 8px;">
+            <li><strong>Coordinador de apoyo Control de Calidad (2025–Actualidad)</strong></li>
+            <li>Dominio de equipos de laboratorio.</li>
+            <li>Inspección de materias primas y productos.</li>
+            <li>Atención de auditorías internas y externas.</li>
+          </ul>
 
-        <p class="subtitulo" style="margin-top: 14px;">Compañía Transplaneta S.A</p>
-        <p><span class="fecha">Mar. 2021 – Abr. 2021</span> | Quito</p>
-        <p><strong>Pasante Técnico</strong></p>
-        <ul>
-          <li>Mantenimiento preventivo y correctivo en motores Diesel.</li>
-          <li>Mantenimiento en sistemas neumáticos e hidráulicos en buses.</li>
-          <li>Reparación de motor Diesel.</li>
-        </ul>
+          <p class="subtitulo">Proceso Integral de la Venta de Repuestos</p>
+          <p><span class="fecha">Jun. 2021 – Ene. 2023</span></p>
+          <ul>
+            <li>Asesora de Repuestos Automotrices</li>
+            <li>Cotización, factura y entrega de repuestos.</li>
+            <li>Gestión con proveedores y manejo de inventarios.</li>
+          </ul>
 
-        <p class="subtitulo" style="margin-top: 14px;">Ambacar</p>
-        <p><span class="fecha">Mar. 2021 – Abr. 2021</span> | Quito</p>
-        <p><strong>Pasante Técnico</strong></p>
-        <ul>
-          <li>Mantenimiento preventivo, correctivo y predictivo.</li>
-          <li>Asesor de servicio.</li>
-          <li>Documentación de fichas técnicas, ingreso y egreso.</li>
-          <li>Mantenimiento de diferentes sistemas del automóvil.</li>
-          <li>Conocimiento sobre garantías de casa comercial.</li>
-          <li>Diagnóstico básico y manejo de scanner.</li>
-        </ul>
+          <p class="subtitulo">Talleres Multimarca LUC</p>
+          <p><span class="fecha">Jun. 2016 – Sep. 2022</span></p>
+          <ul>
+            <li>Ayudante Técnico</li>
+            <li>Mantenimiento preventivo, correctivo y predictivo.</li>
+            <li>Reparación de motores y cajas manuales.</li>
+          </ul>
+        </div>
 
-        <p class="subtitulo" style="margin-top: 14px;">Instructor U.F.A. "ESPE"</p>
-        <p><strong>Charlas sobre sistemas automotrices:</strong></p>
-        <ul>
-          <li>Sistema de suspensión.</li>
-          <li>Sistema de lubricación.</li>
-          <li>Sistema de dirección.</li>
-          <li>Sistema de escape.</li>
-        </ul>
+        <div class="box">
+          <h3>Educación</h3>
+          <p><span class="fecha">2026</span> — EN CURSO</p>
+          <p>Maestría en Producción y Operaciones Industriales</p>
+          <p>Universidad ESPE — Latacunga</p>
 
-        <p class="subtitulo" style="margin-top: 14px;">Andes Cables Pastocalle</p>
-        <p><span class="fecha">Mar. 2024 – Actualidad</span> | Quito</p>
-        <p><strong>Asistente Técnico (2024–2025)</strong></p>
-        <ul>
-          <li>Vigilar y controlar los equipos.</li>
-          <li>Diagnóstico de problemas y averías en equipos e instalaciones industriales.</li>
-          <li>Planificar intervenciones para el correcto mantenimiento.</li>
-          <li>Dominio de herramientas adecuadas de mantenimiento industrial.</li>
-          <li>Elaboración de informes de mantenimiento.</li>
-          <li>Coordinación de equipos e intervención en caso de ser necesario.</li>
-        </ul>
+          <p style="margin-top: 12px;"><span class="fecha">2023</span></p>
+          <p>Universidad ESPE — Latacunga</p>
 
-        <p><strong>Coordinador de apoyo Control de Calidad (2025–Actualidad)</strong></p>
-        <ul>
-          <li>Dominio de equipos de laboratorio y herramientas.</li>
-          <li>Inspección de materias primas, procesos de producción y productos terminados.</li>
-          <li>Identificación y reporte de productos no conformes.</li>
-          <li>Apoyo en la implementación de acciones correctivas y preventivas.</li>
-          <li>Elaboración de informes de calidad.</li>
-          <li>Atención de auditorías internas y externas.</li>
-        </ul>
-      </div>
+          <p style="margin-top: 12px;"><span class="fecha">2020</span></p>
+          <p>U.E. "Simón Bolívar" — Quito</p>
+        </div>
 
-      <div class="box">
-        <h3>Idiomas</h3>
-        <ul>
-          <li>  Suficiencia Inglés</li>
-        </ul>
-      </div>
+        <div class="box">
+          <h3>Cursos destacados</h3>
+          <ul>
+            <li>Vehículos Eléctricos y Movilidad Eléctrica — 2021</li>
+            <li>Diagnóstico con Scanner — 2023</li>
+            <li>Sistema de Dirección Bosch — 2023</li>
+            <li>Metrología Básica — 2026</li>
+            <li>Auditor Interno (Bureau Veritas) — 2026</li>
+            <li>Baterías Básico — 2026</li>
+          </ul>
+        </div>
 
-      <div class="box">
-        <h3>Cursos</h3>
-        <ul>
-          <li>II Congreso de Ingeniería Automotriz y Desagregación Tecnología (CONIADT) — Nov. 2017</li>
-          <li>Procedimiento del Rectificado y Problemas Frecuentes del Motor — Jul. 2018</li>
-          <li>Vehículos Eléctricos y Movilidad Eléctrica — Ago. 2021</li>
-          <li>Sistema de Postratamiento de Gases de Escape en Servicio Ligero — Sep. 2023</li>
-          <li>Sellado de la Cámara de Combustión y Lubricación de Cilindros — Sep. 2023</li>
-          <li>Sistema de Suspensión, Funcionamiento, Fallas Comunes y Cuidados — Ago. 2023</li>
-          <li>Inducción al Sistema de Dirección Bosch — Oct. 2023</li>
-          <li>Pruebas Básicas en el Motor de Arranque — Oct. 2023</li>
-          <li>Diagnóstico Rápido y Fácil utilizando el USB-Autoscop — Nov. 2023</li>
-          <li>Diagnóstico Avanzado con los Scripts del USB Autoscope IV — Feb. 2024</li>
-          <li>Programación de ECUs y DTC OFF — Feb. 2024</li>
-          <li>Tips de Diagnóstico con Scanner (INGECAP) — Abr. 2024</li>
-          <li>Prevención de Riesgos Laborales Energía Eléctrica — Dic. 2025</li>
-          <li>Metrología Básica — Ene. 2026</li>
-          <li>e-SERIES CORE TRACK — May. 2026</li>
-          <li>Baterías Básico — May. 2026</li>
-          <li>Auditor Interno (Bureau Veritas) — Jun. 2026</li>
-        </ul>
-      </div>
+        <div class="box">
+          <h3>Idiomas</h3>
+          <ul>
+            <li>Inglés</li>
+          </ul>
+        </div>
 
-      <div class="box">
-        <h3>Permiso de conducir</h3>
-        <p>Tipo B</p>
-      </div>
+        <div class="box">
+          <h3>Referencias</h3>
+          <p><strong>Ing. José Quiroz</strong><br>Tel: 0984532880</p>
+          <p style="margin-top: 8px;"><strong>Ing. Cristian Paredes</strong><br>Tel: 0994454614</p>
+          <p style="margin-top: 8px;"><strong>Ing. Cintia Raura</strong><br>Tel: 0994856074</p>
+        </div>
 
-      <div class="box">
-        <h3>Educación</h3>
-        <p><span class="fecha">2026</span> — EN CURSO: Maestría en Producción y Operaciones Industriales con mención en Tecnología 4.0</p>
-        <p>Universidad de las Fuerzas Armadas ESPE</p>
-        <p>Latacunga</p>
-
-        <p style="margin-top: 10px;"><span class="fecha">2023</span> — Universidad de las Fuerzas Armadas ESPE</p>
-        <p>Latacunga- Ingenieria Automotriz</p>
-
-        <p style="margin-top: 10px;"><span class="fecha">2020</span> — U.E. "Simón Bolivar" Bachiller Físico Matemático</p>
-        <p>Quito</p>
-
-        <blockquote>
-          Nota: el nombre de la institución correspondiente al año 2020 aparece cortado en el PDF y únicamente se alcanza a leer: "U.E. 'SIMON".
-        </blockquote>
-      </div>
-
-      <div class="box">
-        <h3>Referencias</h3>
-        <p><strong>Ing. José Quiroz</strong></p>
-        <p>Teléfono: 0984532880</p>
-
-        <p style="margin-top: 10px;"><strong>Ing. Cristian Paredes</strong></p>
-        <p>Teléfono: 0994454614</p>
-
-        <p style="margin-top: 10px;"><strong>Ing. Cintia Raura</strong></p>
-        <p>Teléfono: 0994856074</p>
-
-        <p style="margin-top: 10px;"><strong>Ing. Jadira Oña</strong></p>
-        <p>Teléfono: 0987470104</p>
+        <div class="box">
+          <h3>Permiso de conducir</h3>
+          <p>Tipo B</p>
+        </div>
       </div>
     </div>
   </div>
